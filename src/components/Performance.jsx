@@ -10,33 +10,33 @@ const methodologySteps = [
 
 const Performance = () => {
   return (
-    <div className="w-full relative px-2">
-      {/* Vertical Connecting Line */}
-      <div className="absolute left-[23px] top-4 bottom-4 w-1 bg-auxiliary-gray/50 rounded-full z-0 md:left-1/2 md:-ml-0.5"></div>
+    <div className="w-full relative py-4">
+      {/* Vertical Connecting Line strictly on left for mobile */}
+      <div className="absolute left-[23px] top-8 bottom-8 w-1 bg-primary-lushAqua/20 rounded-full z-0"></div>
 
-      <div className="flex flex-col gap-8 md:gap-12 relative z-10">
-        {methodologySteps.map((step, index) => (
+      <div className="flex flex-col gap-8 relative z-10">
+        {methodologySteps.map((step) => (
           <div
             key={step.id}
-            className={`flex items-start gap-6 md:items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+            className="flex items-start gap-6 w-full"
           >
-            {/* Step Number/Icon */}
-            <div className="shrink-0 w-12 h-12 rounded-full bg-primary-megaman border-4 border-auxiliary-light text-primary-lushAqua font-ubuntu font-bold text-xl flex items-center justify-center shadow-md relative z-10 md:mx-auto">
+            {/* Step Number */}
+            <div className="shrink-0 w-12 h-12 rounded-full bg-primary-lushAqua border-4 border-primary-whiteDesert text-primary-candelabra font-ubuntu font-bold text-h5 flex items-center justify-center shadow-sm relative z-10">
               {step.id}
             </div>
 
             {/* Step Content */}
-            <div className={`bg-primary-whiteDesert p-6 rounded-xl shadow-sm border border-auxiliary-gray/30 w-full md:w-[calc(50%-3rem)]`}>
-              <h4 className="text-primary-lushAqua font-bold mb-3">{step.title}</h4>
-              <p className="text-primary-graphite text-small">{step.desc}</p>
+            <div className="flex flex-col pt-2">
+              <h4 className="text-primary-lushAqua font-bold mb-2 text-lg">{step.title}</h4>
+              <p className="text-primary-graphite text-small leading-relaxed">{step.desc}</p>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="mt-12 text-center">
-        <button className="bg-primary-candelabra text-primary-lushAqua px-8 py-4 rounded-md font-bold text-lg hover:bg-opacity-90 transition-all inline-block">
-          Entenda a Metodologia Completa
+      <div className="mt-12 w-full">
+        <button className="w-full border-2 border-primary-lushAqua text-primary-lushAqua px-8 py-4 rounded-md font-bold text-p hover:bg-primary-lushAqua hover:text-auxiliary-light transition-all">
+          Entenda a Metodologia
         </button>
       </div>
     </div>

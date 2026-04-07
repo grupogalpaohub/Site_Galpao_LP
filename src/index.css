@@ -4,29 +4,41 @@
 
 @layer base {
   body {
-    @apply font-manrope text-primary-graphite bg-primary-whiteDesert;
+    @apply bg-primary-lushAqua font-manrope text-auxiliary-light m-0 p-0 overflow-x-hidden;
   }
 
-  h1, h2, h3, h4, h5 {
-    @apply font-ubuntu;
+  h1 {
+    @apply font-ubuntu font-bold text-h1 leading-tight;
   }
 
-  h1 { font-size: 40px; line-height: 1.2; }
-  h2 { font-size: 34px; line-height: 1.2; }
-  h3 { font-size: 28px; line-height: 1.3; }
-  h4 { font-size: 24px; line-height: 1.3; }
-  h5 { font-size: 19px; line-height: 1.4; }
+  h2 {
+    @apply font-ubuntu font-bold text-h2 leading-tight;
+  }
 
-  p { font-size: 16px; line-height: 1.5; }
-  .text-small { font-size: 14px; line-height: 1.5; }
-  .text-xsmall { font-size: 12px; line-height: 1.5; }
+  h3 {
+    @apply font-ubuntu font-bold text-h3 leading-tight;
+  }
+
+  h4 {
+    @apply font-ubuntu font-bold text-h4 leading-tight;
+  }
+
+  h5 {
+    @apply font-ubuntu font-bold text-h5 leading-tight;
+  }
+
+  p {
+    @apply text-p leading-relaxed;
+  }
 }
 
-/* Hide scrollbar for slider elements */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }

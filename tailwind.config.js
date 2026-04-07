@@ -26,6 +26,16 @@ export default {
         ubuntu: ['Ubuntu', 'sans-serif'],
         manrope: ['Manrope', 'sans-serif'],
       },
+      fontSize: {
+        h1: '40px',
+        h2: '34px',
+        h3: '28px',
+        h4: '24px',
+        h5: '19px',
+        p: '16px',
+        small: '14px',
+        xsmall: '12px',
+      }
     },
   },
   plugins: [],
