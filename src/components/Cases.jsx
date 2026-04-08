@@ -8,7 +8,8 @@ const casesData = [
     metric1Value: '12x',
     metric2Label: 'Faturamento Mensal',
     metric2Value: 'R$ 2.5M',
-    tag: 'E-commerce'
+    tag: 'E-commerce',
+    logo: '/Logos Clientes/SoHighCinzaFundoEscuro.png'
   },
   {
     id: 2,
@@ -17,7 +18,8 @@ const casesData = [
     metric1Value: '-45%',
     metric2Label: 'Volume de Leads',
     metric2Value: '+300%',
-    tag: 'Serviços'
+    tag: 'Serviços',
+    logo: '/Logos Clientes/PCTilingCinzaFundoEscuro.png'
   },
   {
     id: 3,
@@ -26,7 +28,8 @@ const casesData = [
     metric1Value: '+85%',
     metric2Label: 'Faturamento',
     metric2Value: 'R$ 850k',
-    tag: 'E-commerce'
+    tag: 'E-commerce',
+    logo: '/Logos Clientes/LIVIA-RIBEIRO-LOGO-HORIZONTALCinzaFundoEscuro.png'
   }
 ];
 
@@ -41,10 +44,15 @@ const Cases = () => {
             className="snap-center shrink-0 w-[85vw] max-w-[320px] bg-primary-graphite rounded-xl overflow-hidden flex flex-col shadow-lg border border-primary-lushAqua"
           >
             {/* Card Content Header */}
-            <div className="p-6 border-b border-primary-lushAqua/50 relative">
+            <div className="p-6 border-b border-primary-lushAqua/50 relative flex flex-col items-start">
                <span className="inline-block bg-primary-candelabra text-primary-lushAqua text-xsmall font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-4">
                  {caseItem.tag}
                </span>
+               <div className="h-12 mb-4 flex items-center justify-start">
+                 {caseItem.logo && (
+                   <img src={caseItem.logo} alt={caseItem.title} className="max-h-full max-w-[120px] object-contain opacity-80" />
+                 )}
+               </div>
                <h4 className="text-auxiliary-light font-bold leading-tight">{caseItem.title}</h4>
             </div>
 

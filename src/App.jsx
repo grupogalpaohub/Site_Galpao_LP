@@ -7,8 +7,8 @@ function App() {
   return (
     <div className="min-h-screen bg-primary-lushAqua text-auxiliary-light font-manrope selection:bg-primary-megaman selection:text-primary-lushAqua w-full flex flex-col">
       {/* Header */}
-      <header className="w-full py-6 px-6 bg-primary-lushAqua border-b border-primary-lushAqua/50 flex justify-between items-center z-50">
-        <div className="font-ubuntu font-bold text-h4 text-auxiliary-light">Galpão</div>
+      <header className="w-full py-4 px-6 bg-primary-lushAqua border-b border-primary-lushAqua/50 flex justify-between items-center z-50">
+        <img src="/Logos Galpão/Logo01-CLight.svg" alt="Galpão" className="h-8 object-contain" />
         <button className="bg-primary-megaman text-primary-lushAqua px-5 py-2 rounded-md font-bold text-small hover:bg-opacity-90 transition-all">
           Começar
         </button>
@@ -59,9 +59,9 @@ function App() {
       {/* Footer */}
       <footer className="w-full py-10 px-6 bg-primary-lushAqua text-auxiliary-gray border-t border-primary-lushAqua/50">
         <div className="max-w-md mx-auto flex flex-col items-center gap-6">
-          <div className="font-ubuntu font-bold text-h5 text-auxiliary-light">Galpão Hub</div>
+          <img src="/Logos Galpão/Logo01-CLight.svg" alt="Galpão" className="h-10 object-contain" />
           <p className="text-small text-center">
-            &copy; {new Date().getFullYear()} Galpão. Todos os direitos reservados.
+            &copy; {new Date().getFullYear()} Galpão Hub. Todos os direitos reservados.
           </p>
         </div>
       </footer>

@@ -2,8 +2,18 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className="w-full bg-primary-lushAqua text-auxiliary-light px-6 py-16 flex flex-col items-center">
-      <div className="max-w-md mx-auto w-full flex flex-col items-start text-left">
+    <section
+      className="w-full relative bg-primary-lushAqua text-auxiliary-light px-6 py-16 flex flex-col items-center overflow-hidden"
+    >
+      {/* Background Image Layer */}
+      <div
+        className="absolute inset-0 z-0 bg-center bg-cover bg-no-repeat opacity-20"
+        style={{ backgroundImage: "url('/Imagens/Imagem Header.jpg')" }}
+      ></div>
+      {/* Background Gradient Overlay */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-primary-lushAqua/80 via-primary-lushAqua/90 to-primary-lushAqua"></div>
+
+      <div className="relative z-10 max-w-md mx-auto w-full flex flex-col items-start text-left">
 
         {/* Main Headline */}
         <h1 className="text-auxiliary-light font-bold mb-6 leading-tight">
